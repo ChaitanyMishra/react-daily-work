@@ -1,12 +1,74 @@
-# React + Vite
+# 🚀 Day 03 - React Props and TailwindCSS Styling
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is part of my daily React learning journey. On **Day 03**, I explored how to use **props** in React components and applied **TailwindCSS** for clean, responsive styling.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📚 What I Learned
 
-## Expanding the ESLint configuration
+* ✅ How to **pass props** to components
+* ✅ The difference between `props.propName` and `props` as an object
+* ✅ Structuring reusable components (`Card`, `ProfileCard`)
+* ✅ Using **Tailwind CSS** to style components responsively
+* ✅ Organizing code into **modular folders** (`cardComponent/`)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 📁 Project Structure
+
+```
+day-03-react/
+├── src/
+│   ├── App.jsx
+│   ├── cardComponent/
+│   │   ├── card.jsx
+│   │   └── profileCard.jsx
+│   ├── index.css
+│   └── App.css
+```
+
+---
+
+## 🧹 Components
+
+### 🔹 ProfileCard
+
+Used to display user profiles with props like:
+
+* `name`
+* `jobRole`
+* `btnText`
+
+```jsx
+<ProfileCard name="Chaitany Mishra" jobRole="Web Developer" btnText="React OP" />
+```
+
+---
+
+### 🔹 Card
+
+A card component that takes a `newDetails` object via props and renders dynamic data.
+
+```jsx
+<Card newDetails={myDetails} />
+```
+
+Where `myDetails` looks like:
+
+```js
+{
+  name: "Chaitany Mishra",
+  jobRole: "Web Developer",
+  btnText: "See Work History"
+}
+```
+
+---
+
+## 🎨 Tailwind CSS
+
+Tailwind is used to style all UI elements with utility-first classes.
+Examples:
+
+* `flex`, `gap-5`, `rounded-lg`, `p-5`, `text-purple-700`, etc.
+* Responsive layout using `flex-wrap`, `justify-center`, `items-center`
