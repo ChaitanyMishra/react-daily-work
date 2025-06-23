@@ -13,6 +13,15 @@ A responsive and modern currency converter built using **React** and **Tailwind 
 * 🔎 Clean UX with real-time updates
 
 ---
+---
+
+## 🖼️ Screenshot
+
+![App Screenshot](./src/currency.png)
+
+---
+> This screenshot shows the default layout of the app with currency input boxes and swap functionality.
+
 
 ## 🛠 Tech Stack
 
