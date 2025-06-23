@@ -1,0 +1,24 @@
+import {useCallback , useState } from 'react'
+import './App.css'
+import './index.css';
+
+function App() {
+  const [length, setLength] = useState(8)
+  const [numCheck , setNumberAllow] = useState(false)
+  const [charAllow , setCharAllow] = useState(false)
+  const [password , setPassword] = useState ("")
+  
+    setPassword(pass)
+    console.log(pass)
+    
+  }
+
+  return (
+    <>
+      <h1 className=' text-red-900 text-3xl font-bold'>Password Genratior</h1>
+<GenPass />
+    </>
+  )
+}
+
+export default App
