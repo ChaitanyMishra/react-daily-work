@@ -1,12 +1,89 @@
-# React + Vite
+# React Routers Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React project demonstrating routing, navigation, and a responsive UI with Tailwind CSS.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React Router** for navigation (`Home`, `About`, `Contact`, `Login`, `Get Started`)
+- **Responsive Header & Footer** with social links and logo
+- **Contact Form** with styled inputs
+- **Modern UI** using Tailwind CSS
+- **Accessible** and mobile-friendly
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 1. Clone the repository
+
+```sh
+git clone <your-repo-url>
+cd react-routers
+```
+
+### 2. Install dependencies
+
+```sh
+npm install
+```
+
+### 3. Start the development server
+
+```sh
+npm run dev
+```
+
+or
+
+```sh
+npm start
+```
+
+### 4. Open in your browser
+
+Visit [http://localhost:5173](http://localhost:5173) (or the port shown in your terminal).
+
+## Project Structure
+
+```
+src/
+  components/
+    Header/
+      Header.jsx
+    Footer/
+      Footer.jsx
+    Home/
+      Home.jsx
+    About/
+      About.jsx
+    Contact/
+      Contact.jsx
+    ...
+  App.jsx
+  main.jsx
+public/
+  logo.jpg
+  images/
+    Remote1.png
+    Remote2.png
+```
+
+## Notes
+
+- **Logo not showing?**  
+  Place your `logo.jpg` inside the `public` folder.
+- **Image 404 errors?**  
+  Make sure any referenced images (like `Remote1.png`, `Remote2.png`) exist in `public/images/` or update the URLs to working images.
+- **SVG warnings?**  
+  All SVG attributes use camelCase (e.g., `fillRule`, `clipRule`).
+
+## Customization
+
+- Update social links in `Footer.jsx` to your own.
+- Change colors and branding in Tailwind classes as needed.
+
+## License
+
+MIT
+
+---
+
+**Happy coding!**
