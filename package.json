@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "react-router-dom": "^7.6.2",
     "tailwind-scrollbar": "^4.0.2"
   }
 }

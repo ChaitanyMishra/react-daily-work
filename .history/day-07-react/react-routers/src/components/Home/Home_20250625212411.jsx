@@ -1,0 +1,2 @@
+<img className="w-96" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="image1" />
+<img className="sm:w-96 w-48" src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="image2" />
