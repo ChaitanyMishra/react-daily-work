@@ -1,0 +1,11 @@
+import React, { useState } from "react";
+import UserContext from './UserContext'
+
+const UserContextProvider = ({childern}) =>{
+    const [user , setUser] = useState(null);
+    return(
+        <UserContextProvider>
+            {childern}
+        </UserContextProvider>
+    )
+}

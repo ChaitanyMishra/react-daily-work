@@ -1,0 +1,5 @@
+const Card = () =>{
+
+}
+
+export de
