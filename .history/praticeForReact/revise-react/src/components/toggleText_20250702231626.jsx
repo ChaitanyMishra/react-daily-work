@@ -1,0 +1,14 @@
+import React from 'react'
+import { useState } from 'react'
+
+function ToggleText() {
+    const [show , setShow]  = useState(false);
+  return (
+    <div className='flex flex-col items-center justify-center h-screen w-screen'>
+      <p >{show ? "After useState" : ""}</p>
+      <button className='px-3 py-4 rounded-lg bg-slate-950 text-white text-center my-5' onClick={() => setShow()} > {text  ? "show text" : "hide text"}</button>
+    </div>
+  )
+}
+
+export default ToggleText
