@@ -1,0 +1,17 @@
+import React from 'react'
+import { useState } from 'react'
+
+export default function Counter() {
+
+  const [counter , setCounter] = useState(0)
+  return (
+    <div className=' flex justify-center gap-5 text-white flex-col'>
+      <button onClick={setCounter} className=' rounded-xl bg-blue-500 px-3 py-1 text-lg hover:bg-blue-600 hover:text-cyan-100 w-auto'>Increse</button>
+      <p className=' text-white text-center text-2xl'> Counter IS</p>
+      <p className=" text-2xl text-red-300 text-center ">
+        {counter}
+      </p>
+      <button className=' rounded-xl bg-blue-500 px-3 py-1 text-lg hover:bg-blue-600 hover:text-cyan-100 w-a '>Decrese</button>
+    </div>
+  )
+}

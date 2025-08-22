@@ -1,0 +1,6 @@
+const Greet =  ()  =>{
+    return(
+<></>
+
+    )
+}

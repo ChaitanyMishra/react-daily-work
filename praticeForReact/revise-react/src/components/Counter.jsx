@@ -1,79 +1,21 @@
-import { useContext, useState } from "react";
-import { ThemeContext } from "../App";
+import React from 'react'
+import { useState } from 'react'
+
+
 
 export default function Counter() {
-  const { theme, setTheme } = useContext(ThemeContext);
-  const [counter, setCounter] = useState(0);
-  const [message, setMessage] = useState("");
 
-  const handleIncrement = () => {
-    if (counter < 20) {
-      setCounter((prev) => prev + 1);
-      setMessage("");
-    } else {
-      setMessage("Value can't go above 20");
-    }
-  };
-
-  const handleDecrement = () => {
-    if (counter > 0) {
-      setCounter((prev) => prev - 1);
-      setMessage("");
-    } else {
-      setMessage("Value can't go below 0");
-    }
-  };
-
-  const reset = () => {
-    setCounter(0);
-    setMessage("");
-  };
-
+const [counter , setCounter] = useState(0)
+  
   return (
-    <div
-      className={`flex flex-col items-center ${
-        theme === "light" ? "bg-slate-200" : "bg-slate-800"
-      } px-6 py-6 rounded-lg shadow-lg space-y-4`}
-    >
-      <div>
-        <button
-          className="bg-white hover:bg-blue-200 text-black font-bold px-4 py-2 rounded"
-          onClick={() =>
-            setTheme(theme === "light" ? "dark" : "light")
-          }
-        >
-          Theme: {theme}
-        </button>
-      </div>
-
-      <h2 className="text-white text-3xl font-bold">{counter}</h2>
-
-      <div className="flex space-x-4">
-        <button
-          className="bg-green-500 hover:bg-green-600 text-white font-bold px-4 py-2 rounded"
-          onClick={handleIncrement}
-        >
-          +
-        </button>
-        <button
-          className="bg-red-500 hover:bg-red-600 text-white font-bold px-4 py-2 rounded"
-          onClick={handleDecrement}
-        >
-          -
-        </button>
-        <button
-          className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold px-4 py-2 rounded"
-          onClick={reset}
-        >
-          Reset
-        </button>
-      </div>
-
-      {message && (
-        <span className="text-yellow-300 font-semibold text-sm italic">
-          {message}
-        </span>
-      )}
+    <div className=' flex justify-center gap-5 text-white'>
+      
+      <button onClick={() => setCounter(prevState => prevState+1)} className=' rounded-xl bg-blue-500 px-3 py-1 text-lg hover:bg-blue-600 hover:text-cyan-100 w-auto'>Increse</button>
+      
+      <p className=" text-2xl text-red-300 text-center ">
+        {counter>0?counter:"We Can Not Go Below 0"}
+      </p>
+      <button className=' rounded-xl bg-blue-500 px-3 py-1 text-lg hover:bg-blue-600 hover:text-cyan-100 w-auto ' onClick={() =>{return setCounter(lastState => lastState-1)}}>Decrese</button>
     </div>
-  );
+  )
 }

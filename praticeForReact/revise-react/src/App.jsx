@@ -1,40 +1,59 @@
-import './index.css';
-import Info from './components/Info';
 import Counter from './components/Counter';
 import Card from './components/Card';
-import ToggleText from './components/toggleText';
-import { createContext, useState } from 'react';
-import ToggleInput from './components/toggleInput';
-
-const ThemeContext = createContext();
+import './index.css';
+import { useState } from 'react';
+import BgChanger from './components/BgChanger';
+import PasswordGen from './components/PasswordGen';
 
 function App() {
-  const [theme, setTheme] = useState('light');
-
+  // ✅ declare students outside return (not inside JSX)
+  const students = [
+    {
+      name: "Chaitany Mishra",
+      course: "BCA",
+      college: "MPCPS",
+      cgpa: 7.24,
+      jobRole: "Front End Developer",
+    },
+    {
+      name: "Amit Sharma",
+      course: "BCA",
+      college: "XYZ College",
+      cgpa: 8.1,
+      jobRole: "Backend Developer",
+    },
+    {
+      name: "Neha Verma",
+      course: "B.Sc IT",
+      college: "ABC University",
+      cgpa: 9.0,
+      jobRole: "UI/UX Designer",
+    },
+  ];
+const [theme , setTheme] = useState('light');
   return (
-    <ThemeContext.Provider value={{ theme, setTheme }}>
-      <div className='h-screen w-full bg-stone-200'>
-        <h1 className='text-center text-purple-600 font-extrabold font-serif text-3xl py-3 italic'>
-          React Revision
-        </h1>
+    
+    <div className={` min-h-screen w-full  ${theme==="light"?"bg-slate-950":"bg-slate-600"} `}>
+      <div className='flex justify-around items-center py-5'>
+      <h1 className="text-center text-white italic underline text-3xl pt-3 dark:text-blue-500">
+        This Is my React Practice Day
+      </h1>
+      <BgChanger theme={theme} setTheme={setTheme} />
+</div>
+      <p className="text-white text-center text-2xl my-6">Counter IS</p>
+     
+      <Counter />
+      
 
-        <div className='flex flex-col h-auto min-h-64 bg-slate-500 w-56 items-center justify-center m-auto text-white text-xl'>
-          <Info name='Chaitany' roll='Web Developer' location='India' />
-        </div>
-
-        <div>
-          <h1 className='text-center text-purple-600 font-extrabold font-serif text-3xl py-5 italic'>
-            Learn About useState
-          </h1>
-          <Counter />
-        </div>
-        <Card name='Chetan' />
-        <ToggleText />
-        <ToggleInput />
+      {/* multiple cards */}
+      <div className="flex flex-wrap gap-6 justify-center mt-8">
+        {students.map((s, i) => (
+          <Card key={i} students={s} />
+        ))}
       </div>
-    </ThemeContext.Provider>
+      <PasswordGen />
+    </div>
   );
 }
 
-export { ThemeContext };
 export default App;
